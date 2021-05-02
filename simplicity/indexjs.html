@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simplicity - simplificando o design responsivo</title>
+
+    <!-- meta tags importantes -->
+    <meta name="description" content="descrição da página">
+    <meta name="keywords" content="palavras, chave, termos chave">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+
+    
+    <!-- css externo -->
+    <link rel="stylesheet" href="estilo.css">
+
+    <!-- inserindo bx slider -->
+      <!-- INSERINDO BX SLIDER -->
+    <link rel="stylesheet" href="bxslider/css/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="bxslider/js/jquery.bxslider.js"></script>
+
+
+
+</head>
+<body>
+
+    <!-- iniciando o cabeçalho do site -->
+    <header>
+        <div class="logo">
+            <a href="index.html" title="página inicial simplicity"><img src="imagens/logo.png" alt="logo simplicity"></a>
+
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#topo" title="inicio">Home</a></li><li><a href="#servicos" title="serviços">Serviços</a></li><li><a href="#aprenda" title="aprenda HTML e CSS">Aprenda</a></li><li><a href="#contato" title="contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- fim do cabeçalho do site -->
+
+
+
+
+    <!-- iniciando área de destaque -->
+    <div class="slider">
+        
+      
+        <div><img src="imagens/destaque-fundo.jpg" alt="destaque fundo"></div>
+        <div><img src="imagens/fundo-contato.jpg" alt="contato"></div>
+        <div><img src="imagens/fundo-madeira.jpg" alt="madeira"></div>
+         
+    </div>
+
+
+
+
+    
+    <!-- fim da área de desatque -->
+
+
+    <!-- iniciandi a área de cta -->
+    <section class="fundo-cta">
+        <div class="cta">
+            <p>um profissional de web pode atuar em diversas carreiras como, design desenvolvedor ou mesmo no palnejamento</p>
+        </div>
+    </section>
+    <!-- fim da área de cta -->
+
+
+
+    <!-- iniciando área de conteúdo principal -->
+    <main id="servicos">
+        <h2>Desenvolvedor Front End</h2>
+        <p>O desenvolvedor  Front end é o proficional que cuida código que é interpretado pelo navegador <br> No desenvolvimento por camadas, HTML é o responsalvel prla marcação conteúdo, o CSS cuida do estilo de JAVASCRIPT é responsalvel pelo comportamento</p>
+        <p class="imagens">
+            <img src="imagens/logohtml5.jpg" alt="logo html5"><img src="imagens/logocss.jpg" alt="logo css"><img src="imagens/logojs.jpg" alt="logo js">
+        </p>
+    </main>
+    
+    <!-- fim da área de conteúdo principal -->
+
+
+    <!-- iciando a seção aprenda -->
+    <div class="fundo-video" id="aprenda">
+        <section class="video">
+            <h2>Aprenda HTML e CSS</h2>
+            <div class="video-responsivo"> <!-- div criada única e exclusivamente para o video ficar totalmente responsivo-->
+                 <iframe style="margin: 0 auto;" src="https://www.youtube.com/embed/Ejkb_YpuHWs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+    </div>
+    <!-- fim da seção aprenda -->
+    
+    
+
+
+
+    <!-- iniciando a área do formulário -->
+
+    <section class="fundo-form" id="contato">
+        <div class="formulario">
+            <h2>Contato</h2>
+            <p>Preencha o formulário abaixo para entrar em contato conosco, se preferir ligue para 11 2345-6789.</p>
+
+            <!-- Criando um formulário no HTML -->
+            <form action="envia.php" method="post">
+
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="nome completo" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="digite seu e-mail" required>
+
+
+                <label for="fone">Telefone:</label>
+                <input type="tel" name="fone" id="fone" placeholder="DDD + Fone">
+
+                <label for="msg">Mensagem:</label>
+                <textarea name="msg" id="msg" rows="10" cols="40" placeholder="digite sua mensagem" required></textarea>
+
+                <button type="submit" class="enviar">Enviar mensagem</button>
+            </form>
+            <!-- Fim do formulário -->
+        </div>
+    </section>
+    <!-- fim da área do formulario -->
+
+
+    <!-- iniciando mapa-->
+
+    <section class="mapa" id="localização">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.1760433026357!2d-46.54243608507319!3d-23.526169866178613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e45de28bb23%3A0x1d2ed3122aae28a7!2sSenac%20Penha!5e0!3m2!1spt-BR!2sbr!4v1617721205081!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+    </section>
+
+    <!-- fim do mapa -->
+
+
+    <!-- iniciando rodapé -->
+
+    <div class="fundo-rodape">
+        <footer>
+            <h2>HTML  e CSS</h2>
+            <p>simplicity é um site ficticio desenvolvido educacionalmente<br>senac penha - 2021 - direitos reservados</p>
+        </footer>
+    </div>
+    <!-- fim do rodapé -->
+
+    <!-- script do bx slider -->
+    <script>
+        $(document).ready(function(){
+          $('.slider').bxSlider();
+        });
+      </script>
+
+</body>
+</html>
